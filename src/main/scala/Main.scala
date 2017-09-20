@@ -38,9 +38,9 @@ object Main extends App {
 
 		thunk
 
-		val time = System.currentTimeMillis - tstart
+		val time = "%.3f" format ((System.currentTimeMillis - tstart)*.001)
 
-		println( s"time for '$title' is $time" )
+		println( s"time for '$title' is $time seconds" )
 	}
 
 	def rnd( min: Int, max: Int ) = (0 until (nextInt(max - min + 1) + min)) map (_ => (nextInt(15) + 'a').toChar) mkString
