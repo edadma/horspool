@@ -43,7 +43,7 @@ object Main extends App {
 		println( s"time for '$title' is $time seconds" )
 	}
 
-	def rnd( min: Int, max: Int ) = (0 until (nextInt(max - min + 1) + min)) map (_ => (nextInt(15) + 'a').toChar) mkString
+	def rnd( min: Int, max: Int ) = (0 until (nextInt(max - min + 1) + min)) map (_ => nextPrintableChar) mkString
 }
 
 class Pattern( val s: String ) {
